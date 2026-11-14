@@ -582,3 +582,33 @@
     height: 220px;
   }
 }
+.clear-order-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 13px;
+  background: transparent;
+  color: #641f35;
+  border: 1px solid #641f35;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.clear-order-btn:hover {
+  background: #641f35;
+  color: #fff9f5;
+}
+
+.remove-btn {
+  margin-top: 10px;
+  padding: 7px 12px;
+  background: #f7dce5;
+  color: #641f35;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #641f35;
+  color: white;
+}

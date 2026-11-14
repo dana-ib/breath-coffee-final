@@ -1,15 +1,13 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function Order() {
-  const [orderItems, setOrderItems] = useState([])
-
-  useEffect(() => {
-    const savedOrder = JSON.parse(
+  const [orderItems, setOrderItems] = useState(() => {
+    return JSON.parse(
       localStorage.getItem('breathOrder') || '[]'
     )
+  })
 
-    setOrderItems(savedOrder)
-  }, [])
+  
 
   function updateQuantity(id, change) {
     const updatedOrder = orderItems
@@ -27,6 +25,11 @@ function Order() {
       JSON.stringify(updatedOrder)
     )
   }
+  function clearOrder(){
+    setOrderItems([])
+    localStorage.removeItem('breathOrder')
+  }
+
 
   const total = orderItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -83,7 +86,12 @@ function Order() {
 
                   </div>
                 </div>
-
+<button 
+className="remove-btn"
+onClick={() => updateQuantity(item.id, -item.quantity)}
+>
+  Remove
+</button>
                 <strong>
                   ${(item.price * item.quantity).toFixed(2)}
                 </strong>
@@ -99,7 +107,12 @@ function Order() {
 
             <div className="total-row">
               <span>Total</span>
+
               <strong>${total.toFixed(2)}</strong>
+              <button
+              className="clear-order-btn"
+              onClick={clearOrder}
+              >Clear Order</button>
             </div>
 
           </div>
