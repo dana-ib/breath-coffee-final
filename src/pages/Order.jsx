@@ -70,9 +70,17 @@ function Order() {
                 <div className="order-item-info">
                   <h3>{item.name}</h3>
 
-                  {item.flavor && (
-                    <p>Flavor: {item.flavor}</p>
-                  )}
+                 {item.flavor && (
+  <p>Flavor: {item.flavor}</p>
+)}
+
+{item.customOptions && (
+  <div className="custom-bouquet-details">
+    <p>Flower Type: {item.customOptions.flowerType}</p>
+    <p>Flower Color: {item.customOptions.flowerColor}</p>
+    <p>Bouquet Size: {item.customOptions.bouquetSize}</p>
+  </div>
+)}
 
                   <p>${item.price.toFixed(2)}</p>
 

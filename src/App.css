@@ -513,20 +513,6 @@
   box-shadow: 0 12px 30px rgba(66, 21, 34, 0.1);
 }
 
-.menu-card-image {
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  background: #f7dce5;
-}
-
-.menu-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
 
 .menu-card:hover .menu-card-image img {
   transform: scale(1.05);
@@ -577,11 +563,7 @@
   background: #421522;
 }
 
-@media (max-width: 550px) {
-  .menu-card-image {
-    height: 220px;
-  }
-}
+
 .clear-order-btn {
   width: 100%;
   margin-top: 20px;
@@ -1070,5 +1052,164 @@
 
   .contact-form {
     padding: 25px 18px;
+  }
+}
+/* BLOOM COLLECTION CUSTOMIZATION */
+
+.menu-card-content label {
+  display: block;
+  color: #641f35;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 14px;
+  margin-bottom: 7px;
+  letter-spacing: 0.5px;
+}
+
+.flavor-select {
+  width: 100%;
+  padding: 11px 12px;
+  margin: 5px 0;
+  background-color: #fff9f5;
+  color: #421522;
+  border: 1px solid #ead8dc;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.flavor-select:focus {
+  border-color: #b87583;
+  box-shadow: 0 0 0 3px rgba(184, 117, 131, 0.12);
+}
+
+.custom-bouquet-details {
+  background: #fff9f5;
+  border-left: 3px solid #c98296;
+  padding: 10px 14px;
+  margin: 12px 0;
+}
+
+.custom-bouquet-details p {
+  min-height: auto;
+  margin: 5px 0;
+  font-size: 12px;
+  color: #806c70;
+}
+/* MENU CATEGORIES */
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 40px auto 45px;
+  padding: 0 15px;
+}
+
+.category-btn {
+  padding: 12px 22px;
+  border: 1px solid #e5cbd1;
+  border-radius: 30px;
+  background: #fff;
+  color: #641f35;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-btn:hover {
+  background: #f7dce5;
+  border-color: #c98296;
+  transform: translateY(-2px);
+}
+
+.category-btn.selected {
+  background: #641f35;
+  color: #fff9f5;
+  border-color: #641f35;
+  box-shadow: 0 5px 15px rgba(100, 31, 53, 0.15);
+}
+
+@media (max-width: 650px) {
+  .menu-categories {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 10px 5%;
+    margin: 25px 0 35px;
+    scrollbar-width: none;
+  }
+
+  .menu-categories::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-btn {
+    flex-shrink: 0;
+    padding: 11px 18px;
+    font-size: 12px;
+  }
+}
+/* MENU GRID */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6%;
+}
+
+/* MENU CARDS */
+
+.menu-card {
+  width: 100%;
+  min-width: 0;
+}
+
+/* PRODUCT IMAGES */
+
+.menu-card-image {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 550px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    padding: 0 5%;
+    gap: 20px;
+  }
+
+  .menu-card-image {
+    height: 180px;
   }
 }

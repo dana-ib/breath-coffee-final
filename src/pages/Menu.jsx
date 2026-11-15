@@ -8,7 +8,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Strawberry, vanilla and creamy milk.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=600',
+    image: '/src/assets/menu/pink cloud.jpeg',
   },
   {
     id: 2,
@@ -16,7 +16,8 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Creamy pistachio latte.',
     price: 5,
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600',
+        image: '/src/assets/menu/pistachio.jpeg',
+
   },
   {
     id: 3,
@@ -24,7 +25,8 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Delicate rose and smooth vanilla.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1541167760496-1628856ab772?w=600',
+        image: '/src/assets/menu/rose.jpeg',
+
   },
   {
     id: 4,
@@ -32,7 +34,8 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Sweet caramel with creamy milk.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600',
+        image: '/src/assets/menu/caramel.jpeg',
+
   },
   {
     id: 5,
@@ -40,7 +43,8 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Fresh strawberry with smooth matcha.',
     price: 5,
-    image: 'https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600',
+        image: '/src/assets/menu/StrawberryMatcha.jpeg',
+
   },
   {
     id: 6,
@@ -48,7 +52,8 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'A rich and bold shot of espresso.',
     price: 2.5,
-    image: 'https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=600',
+        image: '/src/assets/menu/espresso.jpeg',
+
   },
   {
     id: 7,
@@ -56,7 +61,8 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Espresso blended with hot water.',
     price: 3,
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600',
+        image: '/src/assets/menu/hot americano.jpeg',
+
   },
   {
     id: 8,
@@ -64,7 +70,8 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Rich espresso with steamed milk.',
     price: 3.5,
-    image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=600',
+        image: '/src/assets/menu/cappucino.jpeg',
+
   },
   {
     id: 9,
@@ -72,7 +79,8 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Smooth espresso with silky milk.',
     price: 3.75,
-    image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600',
+        image: '/src/assets/menu/flat white.jpeg',
+
   },
   {
     id: 10,
@@ -80,7 +88,8 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Espresso, chocolate and steamed milk.',
     price: 4,
-    image: 'https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?w=600',
+        image: '/src/assets/menu/cafe mocha.jpeg',
+
   },
   {
     id: 11,
@@ -88,7 +97,8 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso, cold milk and sweet cream.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600',
+        image: '/src/assets/menu/Spanish.jpeg',
+
   },
   {
     id: 12,
@@ -96,7 +106,8 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso, milk and caramel drizzle.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600',
+        image: '/src/assets/menu/Caramel Macchiato.jpeg',
+
   },
   {
     id: 13,
@@ -104,7 +115,8 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso with cold milk and vanilla.',
     price: 4,
-    image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600',
+        image: '/src/assets/menu/Vanilla Latte.jpeg',
+
   },
   {
     id: 14,
@@ -112,15 +124,17 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Bold espresso served over ice.',
     price: 3.5,
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600',
+        image: '/src/assets/menu/Americano.jpeg',
+
   },
   {
     id: 15,
-    name: 'Cold Brew',
+    name: 'Iced Mocha',
     category: 'Iced Drinks',
-    description: 'Smooth slow-steeped cold coffee.',
+    description: 'Chocolate,espresso & milk over ice',
     price: 4,
-    image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600',
+        image: '/src/assets/menu/Mocha.jpeg',
+
   },
   {
     
@@ -129,7 +143,8 @@ const menuItems = [
   category: 'Desserts',
   description: 'A creamy cheesecake collection with delicious flavors.',
   price: 5,
-  image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600',
+      image: '/src/assets/menu/CheeseCake.jpeg',
+
   flavors: [
     { name: 'Lotus', price: 5 },
     { name: 'Strawberry', price: 5 },
@@ -146,7 +161,8 @@ const menuItems = [
     category: 'Desserts',
     description: 'Layers of cream and coffee biscuits.',
     price: 4.5,
-    image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600',
+        image: '/src/assets/menu/Tiramisu.jpeg',
+
   },
   
   {
@@ -155,7 +171,8 @@ const menuItems = [
     category: 'Desserts',
     description: 'Rich and fudgy chocolate brownie.',
     price: 3.5,
-    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600',
+        image: '/src/assets/menu/Brownie.jpeg',
+
   },
   {
    
@@ -164,7 +181,8 @@ const menuItems = [
   category: 'Desserts',
   description: 'Soft and delicious cakes in different flavors.',
   price: 4.5,
-  image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600',
+      image: '/src/assets/menu/Cake.jpeg',
+
   flavors: [
     { name: 'Red Velvet', price: 5 },
     { name: 'Chocolate', price: 4.5 },
@@ -180,7 +198,8 @@ const menuItems = [
   category: 'Bakery Corner',
   description: 'Fresh and buttery croissants with delicious fillings.',
   price: 2.5,
-  image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600',
+      image: '/src/assets/menu/Croissant.jpeg',
+
   flavors: [
     { name: 'Butter', price: 2.5 },
     { name: 'Chocolate', price: 3 },
@@ -193,15 +212,16 @@ const menuItems = [
     category: 'Bakery Corner',
     description: 'Soft cinnamon pastry with sweet glaze.',
     price: 3.5,
-    image: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600',
+        image: '/src/assets/menu/cinnamon roll.jpeg',
+
   },
    {
-  id: 36,
+  id: 24,
   name: 'Chocolate Chip Cookies',
   category: 'Bakery Corner',
   description: 'Fresh cookies filled with delicious chocolate chips.',
   price: 2.5,
-  image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600',
+  image: '/src/assets/menu/cookies.jpeg',
 },
   {
     
@@ -210,7 +230,8 @@ const menuItems = [
   category: 'Bakery Corner',
   description: 'Soft and delicious muffins in different flavors.',
   price: 3,
-  image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600',
+      image: '/src/assets/menu/Muffins.jpeg',
+
   flavors: [
     { name: 'Blueberry', price: 3 },
     { name: 'Chocolate', price: 3 },
@@ -224,7 +245,8 @@ const menuItems = [
   category: 'Ice Cream Bar',
   description: 'Creamy and delicious ice cream in your favorite flavors.',
   price: 3,
-  image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600',
+      image: '/src/assets/menu/icecream.jpeg',
+
   flavors: [
     { name: 'Vanilla', price: 3 },
     { name: 'Chocolate', price: 3 },
@@ -235,45 +257,38 @@ const menuItems = [
 },
   
  {
-    id: 31,
-    name: 'A Little Bloom',
-    category: 'The Bloom Collection',
-    description: 'A beautiful single flower.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=600',
+   
+  
+  id: 27,
+  name: 'Customize Your Bouquet',
+  category: 'The Bloom Collection',
+  description: 'Create your own beautiful bouquet with your favorite flowers.',
+  price: 7,
+  
+  isCustomBouquet: true,
+  flowerImages: {
+    Roses: '/src/assets/menu/roses.jpeg',
+    Tulips: '/src/assets/menu/tulips.jpeg',
+    'Mixed Flowers': '/src/assets/menu/mixed.jpeg',
   },
-  {
-    id: 32,
-    name: 'Mini Bloom',
-    category: 'The Bloom Collection',
-    description: 'A little bouquet of fresh flowers.',
-    price: 7,
-    image: 'https://images.unsplash.com/photo-1520763185298-1b434c919102?w=600',
-  },
-  {
-    id: 33,
-    name: 'Pink Rose Bouquet',
-    category: 'The Bloom Collection',
-    description: 'A lovely bouquet of pink roses.',
-    price: 12,
-    image: 'https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600',
-  },
-  {
-    id: 34,
-    name: 'Coffee & Bloom',
-    category: 'The Bloom Collection',
-    description: 'Your favorite coffee with a little flower.',
-    price: 6,
-    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600',
-  },
-  {
-    id: 35,
-    name: 'Surprise Her Box',
-    category: 'The Bloom Collection',
-    description: 'A sweet little box made to surprise.',
-    price: 15,
-    image: 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=600',
-  }, 
+},
+{
+  id: 28,
+  name: 'Coffee & Bloom',
+  category: 'The Bloom Collection',
+  description: 'A lovely coffee moment with fresh flowers.',
+  price: 6,
+  image: '/src/assets/menu/coffe.jpeg',
+},
+{
+  id: 29,
+  name: 'Surprise Her Box',
+  category: 'The Bloom Collection',
+  description: 'A beautiful surprise made with love.',
+  price: 15,
+  image: '/src/assets/menu/box.jpeg',
+},
+
 
 ]
 const categories = [
