@@ -1,16 +1,40 @@
-# React + Vite
+# Breath Coffee Shop 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+Breath Coffee Shop is a responsive frontend website developed using ReactJS. It provides users with a simple and enjoyable experience to explore café products, customize orders, and browse different website sections.
 
-Currently, two official plugins are available:
+## Main Features
+- Browse different menu categories.
+- View products, descriptions, and prices.
+- Filter menu items.
+- Select different product flavors.
+- Customize flower bouquets.
+- Add products to the order.
+- Increase or decrease product quantities.
+- Calculate the total order price.
+- Browse reservation and contact pages.
+- Responsive design for desktop and mobile devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
+- Home
+- Menu
+- Order
+- Reservations
+- About
+- Contact
 
-## React Compiler
+## Technologies Used
+- ReactJS
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- Git and GitHub
+- Netlify
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Installation and Setup
 
-## Expanding the ESLint configuration
+1. Clone the repository:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+   ```bash
+   git clone https://github.com/dana-ib/breath-coffee-final.git
