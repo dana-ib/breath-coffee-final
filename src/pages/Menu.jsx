@@ -123,13 +123,23 @@ const menuItems = [
     image: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600',
   },
   {
-    id: 16,
-    name: 'Lotus Cheesecake',
-    category: 'Desserts',
-    description: 'Creamy cheesecake with Lotus topping.',
-    price: 5,
-    image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600',
-  },
+    
+  id: 16,
+  name: 'Cheesecake Collection',
+  category: 'Desserts',
+  description: 'A creamy cheesecake collection with delicious flavors.',
+  price: 5,
+  image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600',
+  flavors: [
+    { name: 'Lotus', price: 5 },
+    { name: 'Strawberry', price: 5 },
+    { name: 'Oreo', price: 5 },
+    { name: 'Kinder', price: 5 },
+    { name: 'Pistachio', price: 5 },
+    { name: 'Classic', price: 5 },
+  ],
+},
+  
   {
     id: 17,
     name: 'Tiramisu Cup',
@@ -138,16 +148,9 @@ const menuItems = [
     price: 4.5,
     image: 'https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=600',
   },
+  
   {
     id: 18,
-    name: 'Strawberry Cheesecake',
-    category: 'Desserts',
-    description: 'Classic cheesecake with strawberry sauce.',
-    price: 5,
-    image: 'https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600',
-  },
-  {
-    id: 19,
     name: 'Chocolate Brownie',
     category: 'Desserts',
     description: 'Rich and fudgy chocolate brownie.',
@@ -155,29 +158,35 @@ const menuItems = [
     image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600',
   },
   {
-    id: 20,
-    name: 'Red Velvet Cake',
-    category: 'Desserts',
-    description: 'Soft red velvet with cream cheese frosting.',
-    price: 4.5,
-    image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600',
-  },
+   
+  id: 19,
+  name: 'Cake Collection',
+  category: 'Desserts',
+  description: 'Soft and delicious cakes in different flavors.',
+  price: 4.5,
+  image: 'https://images.unsplash.com/photo-1586788680434-30d324b2d46f?w=600',
+  flavors: [
+    { name: 'Red Velvet', price: 5 },
+    { name: 'Chocolate', price: 4.5 },
+    { name: 'Vanilla', price: 4.5 },
+    { name: 'Strawberry', price: 4.5 },
+  ],
+},
+  
   {
-    id: 21,
-    name: 'Chocolate Croissant',
-    category: 'Bakery Corner',
-    description: 'Flaky croissant filled with chocolate.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600',
-  },
-  {
-    id: 22,
-    name: 'Butter Croissant',
-    category: 'Bakery Corner',
-    description: 'Fresh and buttery French croissant.',
-    price: 2.5,
-    image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600',
-  },
+   
+  id: 20,
+  name: 'Croissant Collection',
+  category: 'Bakery Corner',
+  description: 'Fresh and buttery croissants with delicious fillings.',
+  price: 2.5,
+  image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600',
+  flavors: [
+    { name: 'Butter', price: 2.5 },
+    { name: 'Chocolate', price: 3 },
+    { name: 'Almond', price: 3.5 },
+  ],
+},
   {
     id: 23,
     name: 'Cinnamon Roll',
@@ -186,62 +195,45 @@ const menuItems = [
     price: 3.5,
     image: 'https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=600',
   },
+   {
+  id: 36,
+  name: 'Chocolate Chip Cookies',
+  category: 'Bakery Corner',
+  description: 'Fresh cookies filled with delicious chocolate chips.',
+  price: 2.5,
+  image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600',
+},
   {
-    id: 24,
-    name: 'Pain au Chocolat',
-    category: 'Bakery Corner',
-    description: 'French pastry with rich chocolate filling.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1530610476181-d83430b64dcd?w=600',
-  },
+    
+  id: 25,
+  name: 'Muffin Collection',
+  category: 'Bakery Corner',
+  description: 'Soft and delicious muffins in different flavors.',
+  price: 3,
+  image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600',
+  flavors: [
+    { name: 'Blueberry', price: 3 },
+    { name: 'Chocolate', price: 3 },
+    { name: 'Vanilla', price: 3 },
+    { name: 'Red Velvet', price: 3.5 },
+  ],
+},
   {
-    id: 25,
-    name: 'Blueberry Muffin',
-    category: 'Bakery Corner',
-    description: 'Soft muffin filled with blueberries.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1607958996333-41aef7caefaa?w=600',
-  },
-  {
-    id: 26,
-    name: 'Pistachio Ice Cream',
-    category: 'Ice Cream Bar',
-    description: 'Smooth and creamy pistachio ice cream.',
-    price: 3.5,
-    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600',
-  },
-  {
-    id: 27,
-    name: 'Strawberry Ice Cream',
-    category: 'Ice Cream Bar',
-    description: 'Sweet strawberry ice cream.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?w=600',
-  },
-  {
-    id: 28,
-    name: 'Chocolate Ice Cream',
-    category: 'Ice Cream Bar',
-    description: 'Rich and creamy chocolate ice cream.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1501446529957-6226bd447c46?w=600',
-  },
-  {
-    id: 29,
-    name: 'Vanilla Ice Cream',
-    category: 'Ice Cream Bar',
-    description: 'Classic smooth vanilla ice cream.',
-    price: 3,
-    image: 'https://images.unsplash.com/photo-1560008581-09826d1de69e?w=600',
-  },
-  {
-    id: 30,
-    name: 'Lotus Ice Cream',
-    category: 'Ice Cream Bar',
-    description: 'Creamy ice cream with Lotus crumbs.',
-    price: 3.5,
-    image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600',
-  },
+  id: 26,
+  name: 'Ice Cream Collection',
+  category: 'Ice Cream Bar',
+  description: 'Creamy and delicious ice cream in your favorite flavors.',
+  price: 3,
+  image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600',
+  flavors: [
+    { name: 'Vanilla', price: 3 },
+    { name: 'Chocolate', price: 3 },
+    { name: 'Strawberry', price: 3 },
+    { name: 'Pistachio', price: 3.5 },
+    { name: 'Lotus', price: 3.5 },
+  ],
+},
+  
  {
     id: 31,
     name: 'A Little Bloom',
@@ -310,8 +302,11 @@ function handleAdd(item) {
     localStorage.getItem('breathOrder') || '[]'
   )
 
+  const itemKey = item.cartKey || String(item.id)
+
   const existingItem = savedOrder.find(
-    (product) => product.id === item.id
+    (product) =>
+      (product.cartKey || String(product.id)) === itemKey
   )
 
   if (existingItem) {
@@ -319,6 +314,7 @@ function handleAdd(item) {
   } else {
     savedOrder.push({
       ...item,
+      cartKey: itemKey,
       quantity: 1,
     })
   }
@@ -328,8 +324,13 @@ function handleAdd(item) {
     JSON.stringify(savedOrder)
   )
 
-  alert(`${item.name} added to your order! ♡`)
+ const alertName = item.flavor
+  ? `${item.flavor} ${item.name.replace(' Collection', '')}`
+  : item.name
+
+alert(`${alertName} added to your order! ♡`)
 }
+
 
   return (
     <main className="menu-page">

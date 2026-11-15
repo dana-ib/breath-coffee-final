@@ -1,4 +1,29 @@
+import { useState } from 'react'
+
 function MenuCard({ item, onAdd }) {
+  const [selectedFlavor, setSelectedFlavor] = useState(
+    item.flavors?.[0]?.name || ''
+  )
+
+  const currentFlavor = item.flavors?.find(
+    (flavor) => flavor.name === selectedFlavor
+  )
+
+  const currentPrice = currentFlavor?.price ?? item.price
+
+  function handleAdd() {
+    const selectedItem = {
+      ...item,
+      flavor: selectedFlavor || undefined,
+      price: currentPrice,
+      cartKey: selectedFlavor
+        ? `${item.id}-${selectedFlavor}`
+        : String(item.id),
+    }
+
+    onAdd(selectedItem)
+  }
+
   return (
     <div className="menu-card">
 
@@ -12,13 +37,27 @@ function MenuCard({ item, onAdd }) {
 
         <p>{item.description}</p>
 
+        {item.flavors && (
+          <select
+            value={selectedFlavor}
+            onChange={(e) => setSelectedFlavor(e.target.value)}
+            className="flavor-select"
+          >
+            {item.flavors.map((flavor) => (
+              <option key={flavor.name} value={flavor.name}>
+                {flavor.name}
+              </option>
+            ))}
+          </select>
+        )}
+
         <div className="menu-card-bottom">
 
           <span className="menu-price">
-            ${item.price.toFixed(2)}
+            ${currentPrice.toFixed(2)}
           </span>
 
-          <button onClick={() => onAdd(item)}>
+          <button onClick={handleAdd}>
             Add to Order +
           </button>
 

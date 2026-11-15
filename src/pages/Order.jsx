@@ -7,12 +7,15 @@ function Order() {
     )
   })
 
-  
+  // Give each flavor its own identity
+  function getItemKey(item) {
+    return item.cartKey || String(item.id)
+  }
 
-  function updateQuantity(id, change) {
+  function updateQuantity(key, change) {
     const updatedOrder = orderItems
       .map((item) =>
-        item.id === id
+        getItemKey(item) === key
           ? { ...item, quantity: item.quantity + change }
           : item
       )
@@ -25,11 +28,11 @@ function Order() {
       JSON.stringify(updatedOrder)
     )
   }
-  function clearOrder(){
+
+  function clearOrder() {
     setOrderItems([])
     localStorage.removeItem('breathOrder')
   }
-
 
   const total = orderItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
@@ -60,18 +63,25 @@ function Order() {
 
             {orderItems.map((item) => (
 
-              <div className="order-item" key={item.id}>
+              <div className="order-item" key={getItemKey(item)}>
 
                 <img src={item.image} alt={item.name} />
 
                 <div className="order-item-info">
                   <h3>{item.name}</h3>
+
+                  {item.flavor && (
+                    <p>Flavor: {item.flavor}</p>
+                  )}
+
                   <p>${item.price.toFixed(2)}</p>
 
                   <div className="quantity-controls">
 
                     <button
-                      onClick={() => updateQuantity(item.id, -1)}
+                      onClick={() =>
+                        updateQuantity(getItemKey(item), -1)
+                      }
                     >
                       −
                     </button>
@@ -79,19 +89,28 @@ function Order() {
                     <span>{item.quantity}</span>
 
                     <button
-                      onClick={() => updateQuantity(item.id, 1)}
+                      onClick={() =>
+                        updateQuantity(getItemKey(item), 1)
+                      }
                     >
                       +
                     </button>
 
                   </div>
                 </div>
-<button 
-className="remove-btn"
-onClick={() => updateQuantity(item.id, -item.quantity)}
->
-  Remove
-</button>
+
+                <button
+                  className="remove-btn"
+                  onClick={() =>
+                    updateQuantity(
+                      getItemKey(item),
+                      -item.quantity
+                    )
+                  }
+                >
+                  Remove
+                </button>
+
                 <strong>
                   ${(item.price * item.quantity).toFixed(2)}
                 </strong>
@@ -109,10 +128,13 @@ onClick={() => updateQuantity(item.id, -item.quantity)}
               <span>Total</span>
 
               <strong>${total.toFixed(2)}</strong>
+
               <button
-              className="clear-order-btn"
-              onClick={clearOrder}
-              >Clear Order</button>
+                className="clear-order-btn"
+                onClick={clearOrder}
+              >
+                Clear Order
+              </button>
             </div>
 
           </div>
