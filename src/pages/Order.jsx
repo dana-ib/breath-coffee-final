@@ -65,7 +65,11 @@ function Order() {
 
               <div className="order-item" key={getItemKey(item)}>
 
-                <img src={item.image} alt={item.name} />
+                <img 
+                className="order-item-image"
+                src={item.image}
+                alt={item.name}
+                 />
 
                 <div className="order-item-info">
                   <h3>{item.name}</h3>
