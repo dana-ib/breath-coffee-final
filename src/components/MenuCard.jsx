@@ -25,22 +25,27 @@ function MenuCard({ item, onAdd }) {
 
   function handleAdd() {
     const selectedItem = {
-      ...item,
-      flavor: selectedFlavor || undefined,
-      price: currentPrice,
-      customOptions: item.isCustomBouquet
-        ? {
-            flowerType,
-            flowerColor,
-            bouquetSize,
-          }
-        : undefined,
-      cartKey: item.isCustomBouquet
-        ? `${item.id}-${flowerType}-${flowerColor}-${bouquetSize}`
-        : selectedFlavor
-          ? `${item.id}-${selectedFlavor}`
-          : String(item.id),
-    }
+  ...item,
+  image: item.isCustomBouquet
+    ? item.flowerImages[flowerType]
+    : item.image,
+  flavor: selectedFlavor || undefined,
+  price: currentPrice,
+  customOptions: item.isCustomBouquet
+    ? {
+        flowerType,
+        flowerColor,
+        bouquetSize,
+      }
+    : undefined,
+  cartKey: item.isCustomBouquet
+    ? `${item.id}-${flowerType}-${flowerColor}-${bouquetSize}`
+    : selectedFlavor
+      ? `${item.id}-${selectedFlavor}`
+      : String(item.id),
+}
+
+
 
     onAdd(selectedItem)
   }
