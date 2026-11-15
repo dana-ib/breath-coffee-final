@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import MenuCard from '../components/MenuCard'
-
+const menuImages = import.meta.glob(
+  '/src/assets/menu/*',
+  { eager: true, query: '?url', import: 'default' }
+)
 const menuItems = [
   {
     id: 1,
@@ -8,7 +11,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Strawberry, vanilla and creamy milk.',
     price: 4.5,
-    image: '/src/assets/menu/pink cloud.jpeg',
+    image:menuImages['/src/assets/menu/pink cloud.jpeg'],
   },
   {
     id: 2,
@@ -16,7 +19,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Creamy pistachio latte.',
     price: 5,
-        image: '/src/assets/menu/pistachio.jpeg',
+        image: menuImages['/src/assets/menu/pistachio.jpeg'],
 
   },
   {
@@ -25,7 +28,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Delicate rose and smooth vanilla.',
     price: 4.5,
-        image: '/src/assets/menu/rose.jpeg',
+        image: menuImages ['/src/assets/menu/rose.jpeg'],
 
   },
   {
@@ -34,7 +37,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Sweet caramel with creamy milk.',
     price: 4.5,
-        image: '/src/assets/menu/caramel.jpeg',
+        image: menuImages ['/src/assets/menu/caramel.jpeg'],
 
   },
   {
@@ -43,7 +46,7 @@ const menuItems = [
     category: 'Signature Drinks',
     description: 'Fresh strawberry with smooth matcha.',
     price: 5,
-        image: '/src/assets/menu/StrawberryMatcha.jpeg',
+        image: menuImages['/src/assets/menu/StrawberryMatcha.jpeg'],
 
   },
   {
@@ -52,7 +55,7 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'A rich and bold shot of espresso.',
     price: 2.5,
-        image: '/src/assets/menu/espresso.jpeg',
+        image: menuImages['/src/assets/menu/espresso.jpeg'],
 
   },
   {
@@ -61,7 +64,7 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Espresso blended with hot water.',
     price: 3,
-        image: '/src/assets/menu/hot americano.jpeg',
+        image: menuImages['/src/assets/menu/hot americano.jpeg'],
 
   },
   {
@@ -70,7 +73,7 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Rich espresso with steamed milk.',
     price: 3.5,
-        image: '/src/assets/menu/cappucino.jpeg',
+        image: menuImages['/src/assets/menu/cappucino.jpeg'],
 
   },
   {
@@ -79,7 +82,7 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Smooth espresso with silky milk.',
     price: 3.75,
-        image: '/src/assets/menu/flat white.jpeg',
+        image: menuImages['/src/assets/menu/flat white.jpeg'],
 
   },
   {
@@ -88,7 +91,7 @@ const menuItems = [
     category: 'Hot Coffee',
     description: 'Espresso, chocolate and steamed milk.',
     price: 4,
-        image: '/src/assets/menu/cafe mocha.jpeg',
+        image: menuImages['/src/assets/menu/cafe mocha.jpeg'],
 
   },
   {
@@ -97,7 +100,7 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso, cold milk and sweet cream.',
     price: 4.5,
-        image: '/src/assets/menu/Spanish.jpeg',
+        image: menuImages['/src/assets/menu/Spanish.jpeg'],
 
   },
   {
@@ -106,7 +109,7 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso, milk and caramel drizzle.',
     price: 4.5,
-        image: '/src/assets/menu/Caramel Macchiato.jpeg',
+        image: menuImages['/src/assets/menu/Caramel Macchiato.jpeg'],
 
   },
   {
@@ -115,7 +118,7 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Espresso with cold milk and vanilla.',
     price: 4,
-        image: '/src/assets/menu/Vanilla Latte.jpeg',
+        image: menuImages['/src/assets/menu/Vanilla Latte.jpeg'],
 
   },
   {
@@ -124,7 +127,7 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Bold espresso served over ice.',
     price: 3.5,
-        image: '/src/assets/menu/Americano.jpeg',
+        image: menuImages['/src/assets/menu/Americano.jpeg'],
 
   },
   {
@@ -133,7 +136,7 @@ const menuItems = [
     category: 'Iced Drinks',
     description: 'Chocolate,espresso & milk over ice',
     price: 4,
-        image: '/src/assets/menu/Mocha.jpeg',
+        image: menuImages['/src/assets/menu/Mocha.jpeg'],
 
   },
   {
@@ -143,7 +146,7 @@ const menuItems = [
   category: 'Desserts',
   description: 'A creamy cheesecake collection with delicious flavors.',
   price: 5,
-      image: '/src/assets/menu/CheeseCake.jpeg',
+      image: menuImages['/src/assets/menu/CheeseCake.jpeg'],
 
   flavors: [
     { name: 'Lotus', price: 5 },
@@ -161,7 +164,7 @@ const menuItems = [
     category: 'Desserts',
     description: 'Layers of cream and coffee biscuits.',
     price: 4.5,
-        image: '/src/assets/menu/Tiramisu.jpeg',
+        image: menuImages[ '/src/assets/menu/Tiramisu.jpeg'],
 
   },
   
@@ -171,7 +174,7 @@ const menuItems = [
     category: 'Desserts',
     description: 'Rich and fudgy chocolate brownie.',
     price: 3.5,
-        image: '/src/assets/menu/Brownie.jpeg',
+        image: menuImages['/src/assets/menu/Brownie.jpeg'],
 
   },
   {
@@ -181,7 +184,7 @@ const menuItems = [
   category: 'Desserts',
   description: 'Soft and delicious cakes in different flavors.',
   price: 4.5,
-      image: '/src/assets/menu/Cake.jpeg',
+      image: menuImages['/src/assets/menu/Cake.jpeg'],
 
   flavors: [
     { name: 'Red Velvet', price: 5 },
@@ -198,7 +201,7 @@ const menuItems = [
   category: 'Bakery Corner',
   description: 'Fresh and buttery croissants with delicious fillings.',
   price: 2.5,
-      image: '/src/assets/menu/Croissant.jpeg',
+      image: menuImages['/src/assets/menu/Croissant.jpeg'],
 
   flavors: [
     { name: 'Butter', price: 2.5 },
@@ -212,7 +215,7 @@ const menuItems = [
     category: 'Bakery Corner',
     description: 'Soft cinnamon pastry with sweet glaze.',
     price: 3.5,
-        image: '/src/assets/menu/cinnamon roll.jpeg',
+        image: menuImages['/src/assets/menu/cinnamon roll.jpeg'],
 
   },
    {
@@ -221,7 +224,7 @@ const menuItems = [
   category: 'Bakery Corner',
   description: 'Fresh cookies filled with delicious chocolate chips.',
   price: 2.5,
-  image: '/src/assets/menu/cookies.jpeg',
+  image: menuImages['/src/assets/menu/cookies.jpeg'],
 },
   {
     
@@ -230,7 +233,7 @@ const menuItems = [
   category: 'Bakery Corner',
   description: 'Soft and delicious muffins in different flavors.',
   price: 3,
-      image: '/src/assets/menu/Muffins.jpeg',
+      image: menuImages['/src/assets/menu/Muffins.jpeg'],
 
   flavors: [
     { name: 'Blueberry', price: 3 },
@@ -245,7 +248,7 @@ const menuItems = [
   category: 'Ice Cream Bar',
   description: 'Creamy and delicious ice cream in your favorite flavors.',
   price: 3,
-      image: '/src/assets/menu/icecream.jpeg',
+      image: menuImages['/src/assets/menu/icecream.jpeg'],
 
   flavors: [
     { name: 'Vanilla', price: 3 },
@@ -267,9 +270,9 @@ const menuItems = [
   
   isCustomBouquet: true,
   flowerImages: {
-    Roses: '/src/assets/menu/roses.jpeg',
-    Tulips: '/src/assets/menu/tulips.jpeg',
-    'Mixed Flowers': '/src/assets/menu/mixed.jpeg',
+    Roses: menuImages['/src/assets/menu/roses.jpeg'],
+    Tulips: menuImages['/src/assets/menu/tulips.jpeg'],
+    'Mixed Flowers': menuImages['/src/assets/menu/mixed.jpeg'],
   },
 },
 {
@@ -278,7 +281,7 @@ const menuItems = [
   category: 'The Bloom Collection',
   description: 'A lovely coffee moment with fresh flowers.',
   price: 6,
-  image: '/src/assets/menu/coffe.jpeg',
+  image: menuImages['/src/assets/menu/coffe.jpeg'],
 },
 {
   id: 29,
@@ -286,7 +289,7 @@ const menuItems = [
   category: 'The Bloom Collection',
   description: 'A beautiful surprise made with love.',
   price: 15,
-  image: '/src/assets/menu/box.jpeg',
+  image: menuImages['/src/assets/menu/box.jpeg'],
 },
 
 
